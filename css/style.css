@@ -1,0 +1,429 @@
+@font-face {
+  font-family: "stsev851-78";
+  src: url("../fonts/stsev851-78.ttf")
+}
+
+@font-face {
+  font-family: "DINpro";
+  src: url("../fonts/DINPro.ttf")
+}
+
+.content-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  user-select: none;
+  font-family: "stsev851-78", serif;
+  flex-direction: column;
+}
+
+.bg {
+  /*background: url("../img/bg.jpg") no-repeat center center fixed;*/
+  color: #e5ce74;
+  background: radial-gradient(ellipse at center, #3e4059 0%,#00055a 100%);
+  text-shadow:
+          -0   -0.8px 0   #000000,
+          0   -0.8px 0   #000000,
+          -0    0.8px 0   #000000,
+          0    0.8px 0   #000000,
+          -0.8px -0   0   #000000,
+          0.8px -0   0   #000000,
+          -0.8px  0   0   #000000,
+          0.8px  0   0   #000000,
+          -0.8px -0.8px 0   #000000,
+          0.8px -0.8px 0   #000000,
+          -0.8px  0.8px 0   #000000,
+          0.8px  0.8px 0   #000000,
+          -0.8px -0.8px 0   #000000,
+          0.8px -0.8px 0   #000000,
+          -0.8px  0.8px 0   #000000,
+          0.8px  0.8px 0   #000000;
+  background-size: cover;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+}
+
+.page-content {
+  padding-top: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+  height: 100%;
+  flex-flow: row wrap;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
+}
+
+.my-copyright {
+  width: 100%;
+  height: 1vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  align-self: flex-end;
+  font-size: 1.5vmin;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.59);
+  color: #FFF;
+}
+
+.my-viewer {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.my-viewer__content {
+  margin: auto;
+  border: 1px solid #e5ce74;
+  width: 70%;
+  min-height: 50%;
+  font-size: 3.5rem;
+  box-shadow: none;
+  padding: 3%;
+  border-radius: 0 0 5px 5px;
+  color: #e5ce74;
+  background: radial-gradient(ellipse at center, #3e4059 0%,#00055a 100%);
+  text-shadow:
+          -0   -0.8px 0   #000000,
+          0   -0.8px 0   #000000,
+          -0    0.8px 0   #000000,
+          0    0.8px 0   #000000,
+          -0.8px -0   0   #000000,
+          0.8px -0   0   #000000,
+          -0.8px  0   0   #000000,
+          0.8px  0   0   #000000,
+          -0.8px -0.8px 0   #000000,
+          0.8px -0.8px 0   #000000,
+          -0.8px  0.8px 0   #000000,
+          0.8px  0.8px 0   #000000,
+          -0.8px -0.8px 0   #000000,
+          0.8px -0.8px 0   #000000,
+          -0.8px  0.8px 0   #000000,
+          0.8px  0.8px 0   #000000;
+}
+
+.my-viewer__header {
+  display: flex;
+  padding-left: 2%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 7vmin;
+  width: 70%;
+  align-self: center;
+  margin: 12vh auto auto auto;
+  color: #e5ce74;
+  background: radial-gradient(ellipse at center, #3e4059 0%,#00055a 100%);
+  text-shadow:
+          -0   -0.8px 0   #000000,
+          0   -0.8px 0   #000000,
+          -0    0.8px 0   #000000,
+          0    0.8px 0   #000000,
+          -0.8px -0   0   #000000,
+          0.8px -0   0   #000000,
+          -0.8px  0   0   #000000,
+          0.8px  0   0   #000000,
+          -0.8px -0.8px 0   #000000,
+          0.8px -0.8px 0   #000000,
+          -0.8px  0.8px 0   #000000,
+          0.8px  0.8px 0   #000000,
+          -0.8px -0.8px 0   #000000,
+          0.8px -0.8px 0   #000000,
+          -0.8px  0.8px 0   #000000,
+          0.8px  0.8px 0   #000000;
+  border-radius: 5px 5px 0 0;
+  font-family: DINPro, serif;
+  border: 1px solid #e5ce74;
+  border-bottom: none;
+
+}
+
+my-viewer__header--controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.my-viewer__body {
+  text-indent: 7vmin;
+  text-align: justify;
+  margin-bottom: 7vmin;
+  font-size: 4vmin;
+}
+
+.my-viewer__controls {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.close {
+  align-self: flex-end;
+  position: relative;
+  right: -26px;
+  top: -33px;
+}
+
+
+.my-hide {
+  opacity: 0;
+  cursor: default;
+  z-index: -99;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  font-size: 15vmin;
+}
+
+.workspace-grid {
+  width: 99.3%;
+  height: 62.4%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-gap: .2vmin 0;
+}
+
+.sub-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 100%;
+  grid-gap: 0 .2vmin;
+}
+
+.grid-item {
+  justify-content: center;
+  align-items: center;
+  font-size: 4vmin;
+  background: radial-gradient(ellipse at center, #3e4059 0%,#00055a 100%);
+  color: #e5ce74;
+  text-align: center;
+  text-shadow:
+          -0   -0.8px 0   #000000,
+          0   -0.8px 0   #000000,
+          -0    0.8px 0   #000000,
+          0    0.8px 0   #000000,
+          -0.8px -0   0   #000000,
+          0.8px -0   0   #000000,
+          -0.8px  0   0   #000000,
+          0.8px  0   0   #000000,
+          -0.8px -0.8px 0   #000000,
+          0.8px -0.8px 0   #000000,
+          -0.8px  0.8px 0   #000000,
+          0.8px  0.8px 0   #000000,
+          -0.8px -0.8px 0   #000000,
+          0.8px -0.8px 0   #000000,
+          -0.8px  0.8px 0   #000000,
+          0.8px  0.8px 0   #000000;
+  border: .1vmin solid #e5ce74;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.grid-item--title {
+  grid-column: 1;
+}
+
+.grid-item--data {
+  cursor: pointer;
+}
+
+
+
+.page {
+  display: none;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: animate .5s linear;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.stage {
+  width: 100%;
+  height: 5%;
+  animation: animate 1s linear;
+  opacity: 1;
+  font-size: 3vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.active {
+  display: flex;
+  opacity: 1;
+}
+
+.visible {
+  display: block;
+}
+
+.disabled {
+  opacity: 0;
+  transition-duration: .5s;
+}
+
+.my-button{
+  border: .2vmin solid #e5ce74;
+  padding: 2vmin 4vmin;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3vmin;
+  margin: 2vmin 1vmin;
+  transition-duration: 0.4s;
+  border-radius: 0.5vmin;
+  cursor: pointer;
+  color: #e5ce74;
+  background: radial-gradient(ellipse at center, #3e4059 0%,#00055a 100%);
+}
+
+.my-button:hover {
+  background: white;
+  color: black;
+  border-color: #3e4059;
+}
+
+.my-button.correct {
+  border: 2px solid green;
+}
+
+.my-button.incorrect {
+  border: 2px solid red;
+}
+
+.back-button {
+  position: fixed;
+  top: 30%; left: 0;
+}
+
+.end-game {
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15vmin;
+  width: 100%;
+  height: 100%;background: radial-gradient(ellipse at center, #3e4059 0%,#00055a 100%);
+  color: #e5ce74;
+  text-align: center;
+  text-shadow:
+          -0   -0.8px 0   #000000,
+          0   -0.8px 0   #000000,
+          -0    0.8px 0   #000000,
+          0    0.8px 0   #000000,
+          -0.8px -0   0   #000000,
+          0.8px -0   0   #000000,
+          -0.8px  0   0   #000000,
+          0.8px  0   0   #000000,
+          -0.8px -0.8px 0   #000000,
+          0.8px -0.8px 0   #000000,
+          -0.8px  0.8px 0   #000000,
+          0.8px  0.8px 0   #000000,
+          -0.8px -0.8px 0   #000000,
+          0.8px -0.8px 0   #000000,
+          -0.8px  0.8px 0   #000000,
+          0.8px  0.8px 0   #000000;
+  top: 0;
+  animation: end-game 2s linear;
+}
+
+@keyframes end-game {
+  0% {
+    top: -100%
+  }
+  80% {
+    top: 0
+  }
+  85% {
+    top: -10%
+  }
+  90% {
+    top: 0
+  }
+  95% {
+    top: -5%
+  }
+  100% {
+    top: 0
+  }
+}
+
+.settings {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: none;
+  font-size: 5vmin;
+  outline: none;
+  border: none;
+}
+
+.settings:hover {
+  color: whitesmoke;
+}
+
+.settings-timeout {
+  padding: 0 1vmin;
+  background: none;
+  width: 9vmin;
+}
+
+.settings-team-name {
+  padding: 0 1vmin;
+  background: none;
+}
+
+
+.settings-content {
+  width: 28%;
+  min-height: 26%;
+}
+
+.settings-header {
+  width: 28%;
+}
